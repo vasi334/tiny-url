@@ -1,9 +1,9 @@
 package com.tiny_url.auth_server.security.services;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.tiny_url.auth_server.models.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
@@ -15,7 +15,7 @@ public class UserDetailsImpl implements UserDetails {
 
     private static final long seralVersionUID = 1L;
 
-    private Long id;
+    private String id;
 
     private String username;
 
@@ -26,7 +26,7 @@ public class UserDetailsImpl implements UserDetails {
 
     private Collection<? extends GrantedAuthority> authorities;
 
-    public UserDetailsImpl(Long id, String username, String email, String password,
+    public UserDetailsImpl(String id, String username, String email, String password,
                            Collection<? extends GrantedAuthority> authorities){
         this.id = id;
         this.username = username;
@@ -37,7 +37,7 @@ public class UserDetailsImpl implements UserDetails {
 
     public static UserDetailsImpl build(User user){
         List<GrantedAuthority> authorities = user.getRoles().stream()
-                .map(role -> new SimpleGrantedAuthority(role.getName().name))
+                .map(role -> new SimpleGrantedAuthority(role.getName().name()))
                 .collect(Collectors.toList());
 
         return new UserDetailsImpl(
@@ -53,7 +53,7 @@ public class UserDetailsImpl implements UserDetails {
         return authorities;
     }
 
-    public Long getId(){
+    public String getId(){
         return id;
     }
 

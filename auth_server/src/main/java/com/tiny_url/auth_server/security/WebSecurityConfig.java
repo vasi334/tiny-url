@@ -1,5 +1,8 @@
 package com.tiny_url.auth_server.security;
 
+import com.tiny_url.auth_server.security.jwt.AuthEntryPointJwt;
+import com.tiny_url.auth_server.security.jwt.AuthTokenFilter;
+import com.tiny_url.auth_server.security.services.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,7 +30,7 @@ public class WebSecurityConfig {
     UserDetailsServiceImpl userDetailsService;
 
     @Autowired
-    private AuthEntryPointJWT unauthorizedHandler;
+    private AuthEntryPointJwt unauthorizedHandler;
 
     @Bean
     public AuthTokenFilter authenticationJwtTokenFilter(){
@@ -55,12 +58,12 @@ public class WebSecurityConfig {
     }
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable())
                 .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authorizeHttpRequests(auth -> auth.requestMatchers(("/api/auth/**"))).permitAll().requestMathcers("/api/test/**")
-                .permitAll().anyRequest().authenticated();
+                .authorizeHttpRequests(auth -> auth.requestMatchers("/api/auth/**").permitAll().requestMatchers("/api/test/**")
+                        .permitAll().anyRequest().authenticated());
 
         http.authenticationProvider(authenticationProvider());
 
