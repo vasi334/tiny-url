@@ -6,6 +6,7 @@ Server responsible with verifying the identity of users by checking their provid
 
 > [!NOTE]
 > **Run Spring Boot application**
+
 > mvn spring-boot:run
 
 
