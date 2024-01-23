@@ -1,4 +1,4 @@
-# tiny-url
+# TinyURL
 
 # auth-server
 
