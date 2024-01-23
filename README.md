@@ -18,3 +18,13 @@ Service used to keep track of the available instances of each microservice in th
 > **Run Spring Boot application**
 
 > mvn spring-boot:run
+
+
+# config-server
+
+Server responsible for providing a central place to manage external properties for microservices.
+
+> [!NOTE]
+> **Run Spring Boot application**
+
+> mvn spring-boot:run
