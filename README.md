@@ -32,7 +32,7 @@ Server responsible for providing a central place to manage external properties f
 
 # zipkin
 Zipkin is a distributed tracing system. It helps gather timing data needed to troubleshoot latency problems in service architectures. Features include both the collection and lookup of this data.
-This project use a 	${\color{blue}docker}$ image for zipkin.
+This project use a 	${\color{lightblue}docker}$ image for zipkin.
 
 > [!NOTE]
 > **Run Zipkin**
