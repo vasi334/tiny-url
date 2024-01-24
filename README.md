@@ -2,7 +2,7 @@
 
 **This service will provide short aliases redirecting to long URLs.**
 
-# auth-server
+## auth-server
 
 Server responsible with verifying the identity of users by checking their provided credentials (username and password) and grants access to authorized resources based on successful verification.
 
@@ -12,7 +12,7 @@ Server responsible with verifying the identity of users by checking their provid
 > mvn spring-boot:run
 
 
-# service-registry
+## service-registry
 
 Service used to keep track of the available instances of each microservice in the application.
 
@@ -22,7 +22,7 @@ Service used to keep track of the available instances of each microservice in th
 > mvn spring-boot:run
 
 
-# config-server
+## config-server
 
 Server responsible for providing a central place to manage external properties for microservices (like server port).
 
@@ -32,7 +32,7 @@ Server responsible for providing a central place to manage external properties f
 > mvn spring-boot:run
 
 
-# zipkin
+## zipkin
 Zipkin is a distributed tracing system. It helps gather timing data needed to troubleshoot latency problems in service architectures. Features include both the collection and lookup of this data.
 This project use a 	${\color{lightblue}docker}$ image for zipkin.
 
