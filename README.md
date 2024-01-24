@@ -22,9 +22,19 @@ Service used to keep track of the available instances of each microservice in th
 
 # config-server
 
-Server responsible for providing a central place to manage external properties for microservices.
+Server responsible for providing a central place to manage external properties for microservices (like server port).
 
 > [!NOTE]
 > **Run Spring Boot application**
 
 > mvn spring-boot:run
+
+
+# zipkin
+Zipkin is a distributed tracing system. It helps gather timing data needed to troubleshoot latency problems in service architectures. Features include both the collection and lookup of this data.
+This project use a 	$${\color{docker}Blue}$$ image for zipkin.
+
+> [!NOTE]
+> **Run Zipkin**
+
+> docker run -d -p 9411:9411 openzipkin/zipkin
