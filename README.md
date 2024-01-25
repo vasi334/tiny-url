@@ -40,3 +40,18 @@ This project use a 	${\color{lightblue}docker}$ image for zipkin.
 > **Run Zipkin**
 
 > docker run -d -p 9411:9411 openzipkin/zipkin
+
+
+## api-gateway
+
+API Gateway is a service that acts as a central entry point for the TinyURL backend microservices. It handles incoming requests, performs necessary routing, and provides a unified interface to access various functionalities of the system.
+
+# Prerequisites
+
+> [!NOTE]
+> Before running the API Gateway, ensure that the following components are set up and running:
+
+- auth-server: Server for user authentication.
+- service-registry: Service registry to keep track of microservice instances.
+- config-server: Server for managing external properties for microservices.
+- zipkin: Distributed tracing system for troubleshooting latency issues.
