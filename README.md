@@ -53,7 +53,7 @@ This project use a 	${\color{lightblue}docker}$ image for zipkin.
 
 API Gateway is a service that acts as a central entry point for the TinyURL backend microservices. It handles incoming requests, performs necessary routing, and provides a unified interface to access various functionalities of the system.
 
-# Prerequisites
+### Prerequisites
 
 > [!NOTE]
 > Before running the API Gateway, ensure that the following components are set up and running:
