@@ -11,7 +11,7 @@
 
 ## Architecture
 
-![TinyURLArchitectureDiagram](https://github.com/vasi334/tiny-url/assets/74433291/1f072f5b-4f7c-4db6-a9cf-1c6c614e584a)
+![TinyURLArchitectureBackend](https://github.com/vasi334/tiny-url/assets/74433291/1bf6aefb-4086-44b2-9c0b-ee5f533c06d8)
 
 
 ## auth-server
