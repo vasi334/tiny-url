@@ -2,12 +2,12 @@
 
 ## Features
 
-**A url shortening application with the following fearures.**
+**A URL shortening application with the following features:**
 
 - Generate a shortened url based on the original one.
 - Specify a unique hash in place of a randomly generated one.
 - Set expiration date of the url redirect.
-- User authentication to save your urls.
+- User authentication to save your URLs.
 
 ## Architecture
 
