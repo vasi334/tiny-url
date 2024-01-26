@@ -9,6 +9,11 @@
 - Set expiration date of the url redirect.
 - User authentication to save your urls.
 
+## Architecture
+
+![TinyURLArchitectureDiagram](https://github.com/vasi334/tiny-url/assets/74433291/1f072f5b-4f7c-4db6-a9cf-1c6c614e584a)
+
+
 ## auth-server
 
 Server responsible with verifying the identity of users by checking their provided credentials (username and password) and grants access to authorized resources based on successful verification.
