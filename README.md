@@ -54,7 +54,7 @@ This project use a 	${\color{lightblue}docker}$ image for zipkin.
 > docker run -d -p 9411:9411 openzipkin/zipkin
 
 
-> ## shortened-service
+## shortened-service
 Shortened service is the main application that is responsible for URLs generation, redirection to original URL, and listing out the URLs a user has generated. It takes in a URL and generates a shortened URL with a hash retrieved from Hash Service, also maintains a collection of documents that maps a hash to its original URL and other fields such as expiration date and username.
 
 > [!NOTE]
