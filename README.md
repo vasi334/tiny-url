@@ -54,6 +54,15 @@ This project use a 	${\color{lightblue}docker}$ image for zipkin.
 > docker run -d -p 9411:9411 openzipkin/zipkin
 
 
+> ## shortened-service
+Shortened service is the main application that is responsible for URLs generation, redirection to original URL, and listing out the URLs a user has generated. It takes in a URL and generates a shortened URL with a hash retrieved from Hash Service, also maintains a collection of documents that maps a hash to its original URL and other fields such as expiration date and username.
+
+> [!NOTE]
+> **Run Spring Boot application**
+
+> mvn spring-boot:run
+
+
 ## api-gateway
 
 API Gateway is a service that acts as a central entry point for the TinyURL backend microservices. It handles incoming requests, performs necessary routing, and provides a unified interface to access various functionalities of the system.
