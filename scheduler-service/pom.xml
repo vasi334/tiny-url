@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tiny_url</groupId>
-	<artifactId>hash-service</artifactId>
+	<artifactId>scheduler-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>hash-service</name>
-	<description>Service for managing collection of pregenerated hashes</description>
+	<name>scheduler-service</name>
+	<description>Responsible for generating new hashes</description>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2023.0.0</spring-cloud.version>
@@ -27,21 +27,14 @@
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
