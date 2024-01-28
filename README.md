@@ -63,6 +63,15 @@ Shortened service is the main application that is responsible for URLs generatio
 > mvn spring-boot:run
 
 
+## hash-service
+Hash service is responsible with retrieving hashes, mark them as used/unused.
+
+> [!NOTE]
+> **Run Spring Boot application**
+
+> mvn spring-boot:run
+
+
 ## api-gateway
 
 API Gateway is a service that acts as a central entry point for the TinyURL backend microservices. It handles incoming requests, performs necessary routing, and provides a unified interface to access various functionalities of the system.
