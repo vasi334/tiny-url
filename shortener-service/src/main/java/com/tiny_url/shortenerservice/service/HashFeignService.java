@@ -12,7 +12,7 @@ import java.util.Map;
 @FeignClient(value = "hash-service")
 public interface HashFeignService {
     @GetMapping("/hash/retrieve")
-    Map<String, Object> retrieve();
+    Map<String, Object> retrieveOne();
 
     @GetMapping("/hash/{hash}")
     Map<String, Object> markHashAsUsed(@PathVariable("hash") String hash);
