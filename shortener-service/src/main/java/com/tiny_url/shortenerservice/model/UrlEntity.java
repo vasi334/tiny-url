@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document("urlmap")
+@Document(collection = "url_map")
 public class UrlEntity {
     @Id
     private String hash;

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.Map;
 
 @Service
-@FeignClient(value = "hash-depl")
+@FeignClient(value = "hash-service")
 public interface HashFeignService {
     @GetMapping("/hash/retrieve")
     Map<String, Object> retrieve();
