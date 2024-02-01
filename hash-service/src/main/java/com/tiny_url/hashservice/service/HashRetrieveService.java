@@ -37,7 +37,7 @@ public class HashRetrieveService {
     @Transactional
     public String retrieveOne() {
         log.info("start to retrieve a hash");
-        MongoCollection<Document> unusedhash = mongoTemplate.getCollection("unusedhash");
+        MongoCollection<Document> unusedhash = mongoTemplate.getCollection("unused_hash");
         Document hashDoc = unusedhash.findOneAndDelete(new BsonDocument());
         if (hashDoc == null) {
             // there is no hash available

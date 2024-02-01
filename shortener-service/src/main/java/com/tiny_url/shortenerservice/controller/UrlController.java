@@ -48,8 +48,11 @@ public class UrlController {
 
         if (requestTokenHeader != null && requestTokenHeader.startsWith("Bearer ")) {
             String token = requestTokenHeader.substring(7);
+            System.out.println(token);
             try {
+                System.out.println("here");
                 username = jwtTokenUtil.getUsernameFromToken(token);
+                System.out.println("here2");
                 System.out.println(username);
             }  catch (ExpiredJwtException e) {
                 throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "session timeout, please log in again");

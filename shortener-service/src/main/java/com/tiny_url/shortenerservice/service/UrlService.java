@@ -26,7 +26,7 @@ public class UrlService {
     @Transactional
     public String generateShortenedUrl(String originalUrl, LocalDateTime expireDate, String username){
         log.info("Start generateShortenUrl");
-        String hash = (String) hashFeignService.retrieve().get("data");
+        String hash = (String) hashFeignService.retrieveOne().get("data");
         log.info("Retrieved a hash from hash service: "+hash);
         urlRepository.save(new UrlEntity(hash, originalUrl, expireDate, username));
         log.info("Saved hash and original to db");
